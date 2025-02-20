@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* #root {
+    display: grid;
+    gap: 1rem;
+} */
+
+/* NOTEAPP NAVBAR */
+.note-header {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+
+    /* styele untuk search input */
+    .input-header {
+        padding: 0.6rem 1.2rem;
+        border-radius: 0.4rem;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        -ms-border-radius: 0.4rem;
+        -o-border-radius: 0.4rem;
+        border: 1.2px solid black;
+    }
+}
+
+/* NOTEAPP BODY */
+.note-body {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    /* styling untuk bagina form */
+    .note-body-input {
+        width: min(600px, 80%);
+        margin: 0 auto;
+
+        .input-limit {
+            text-align: right;
+        }
+
+        /* styling untuk input form dan submit button */
+        & form {
+            display: flex;
+            flex-flow: column;
+            gap: 0.4rem;
+
+            input,
+            textarea {
+                padding: 0.6rem 1.2rem;
+                border: 1.2px solid black;
+                border-radius: 0.4rem;
+                -webkit-border-radius: 0.4rem;
+                -moz-border-radius: 0.4rem;
+                -ms-border-radius: 0.4rem;
+                -o-border-radius: 0.4rem;
+            }
+
+            input {
+                font-weight: 700;
+
+                &::placeholder {
+                    font-weight: 400;
+                }
+            }
+
+            textarea {
+                height: 10rem;
+            }
+
+            button {
+                padding: 0.4rem;
+                font-size: 1rem;
+                color: white;
+                background-color: #1e1eff;
+                border: 1.2px solid black;
+                border-radius: 0.4rem;
+                -webkit-border-radius: 0.4rem;
+                -moz-border-radius: 0.4rem;
+                -ms-border-radius: 0.4rem;
+                -o-border-radius: 0.4rem;
+            }
+        }
+    }
+
+    /* styling untuk note list */
+    .note-list {
+        display: grid;
+        gap: 0.6rem;
+        width: min(900px, 95%);
+        margin: 0 auto;
+
+        .note-list-title {
+            font-size: 1.8rem;
+        }
+
+        /* styling note list dengan layout responsive grid */
+        .note-list-item {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            grid-auto-flow: dense;
+
+            /* styling untuk note item */
+            .note-item {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+                border: 2px solid black;
+                border-radius: 0.25em;
+                -webkit-border-radius: 0.25em;
+                -moz-border-radius: 0.25em;
+                -ms-border-radius: 0.25em;
+                -o-border-radius: 0.25em;
+
+                .note-item-content {
+                    padding: 0.6rem;
+
+                    .note-item-create {
+                        font-size: 0.8rem;
+                        color: rgba(0, 0, 0, 0.459);
+                    }
+
+                    .note-item-body {
+                        font-size: 0.98rem;
+                        margin-top: 0.4rem;
+                        line-height: 1.2rem;
+                    }
+                }
+
+                .note-item-action {
+                    display: flex;
+
+                    button {
+                        cursor: pointer;
+                        width: 100%;
+                        padding: 0.4rem 0;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        background-color: transparent;
+                        border: none;
+                        border-top: 2px solid black;
+                    }
+
+                    .action-delete {
+                        border-right: 2px solid black;
+                        color: red;
+                    }
+
+                    .action-archive {
+                        color: #1e1eff;
+                    }
+                }
+            }
+        }
+    }
+}
